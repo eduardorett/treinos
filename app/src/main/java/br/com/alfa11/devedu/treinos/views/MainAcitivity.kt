@@ -4,21 +4,21 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import br.com.alfa11.devedu.treinos.R
-import kotlinx.android.synthetic.main.activity_treinos.*
-import kotlinx.android.synthetic.main.activity_treinos_form.*
+import kotlinx.android.synthetic.main.activity_main.*
 
-class TreinosAcitivity : AppCompatActivity() {
+
+class MainAcitivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_treinos)
+        setContentView(R.layout.activity_main)
 
 
         button_novo_treino.setOnClickListener {
-            startActivity(Intent(this, NovoTreino::class.java))
+            startActivity(Intent(this, CadastroTreinoActivity::class.java))
         }
 
         go_to_training_form.setOnClickListener {
-            startActivity(Intent(this,TreinosFormActivity::class.java))
+            startActivity(Intent(this,DetalhesTreinoActivity::class.java))
         }
     }
 }
