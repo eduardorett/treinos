@@ -13,7 +13,14 @@ class CadastroTreinoActivity : AppCompatActivity() {
 
         criar_novo_treino.setOnClickListener {
             startActivity(Intent(this, DetalhesTreinoActivity::class.java))
-
         }
+
+
+    }
+
+    fun criarTreino(){
+
+        novo_treino
+
     }
 }

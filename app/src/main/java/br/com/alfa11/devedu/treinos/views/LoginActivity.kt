@@ -18,7 +18,7 @@ class LoginActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        auth = FirebaseAuth.getInstance();
+        auth = FirebaseAuth.getInstance()
 
 
         button_login.setOnClickListener {
@@ -26,7 +26,11 @@ class LoginActivity: AppCompatActivity() {
             val email = edit_email.text.toString()
             val senha = edit_password.text.toString()
 
-            signIn(email, senha)
+            if(email == "" && senha == ""){
+                Toast.makeText(baseContext, "Preencha os campos com um usuario valido",
+                    Toast.LENGTH_SHORT).show()
+            }else{
+                signIn(email, senha)}
 
         }
 
@@ -43,24 +47,7 @@ class LoginActivity: AppCompatActivity() {
         //updateUI(currentUser)
     }
 
-    private fun createAccount(email: String, password: String) {
 
-        auth!!.createUserWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
-                    // Sign in success, update UI with the signed-in user's information
-                    Log.d(TAG, "createUserWithEmail:success")
-                    val user = auth!!.currentUser
-                    updateUI(user)
-                } else {
-                    // If sign in fails, display a message to the user.
-                    Log.w(TAG, "createUserWithEmail:failure", task.exception)
-                    Toast.makeText(baseContext, "Authentication failed.",
-                        Toast.LENGTH_SHORT).show()
-                    updateUI(null)
-                }
-            }
-    }
 
     private fun signIn(email: String, password: String) {
 
@@ -92,7 +79,7 @@ class LoginActivity: AppCompatActivity() {
     }
 
     companion object {
-        private const val TAG = "EmailPassword"
+        private const val TAG = "LoginActivity"
     }
 }
 
