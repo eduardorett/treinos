@@ -7,14 +7,27 @@
     tools:context=".views.CadastroTreinoActivity">
 
 
+    <ImageView
+        android:id="@+id/image_logo"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/ic_baseline_directions_bike_24"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/view_detalhes_do_treino"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="CRIE O SEU TREINO"
-        android:textSize="50dp"
+        android:textSize="30dp"
         android:gravity="center"
-        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/teal_200"
+        android:textColor="@color/design_default_color_error"
+        app:layout_constraintTop_toBottomOf="@id/image_logo"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"/>
 
@@ -23,8 +36,7 @@
         android:id="@+id/nome_do_novo_treino"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:hint="NOME DO NOVO TREINO"
+        android:hint="Nome do novo treino"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -35,8 +47,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:drawablePadding="8dp"
-        android:gravity="center"
-        android:hint="DESCRICAO DO TREINO"
+        android:hint="Descrição do treino"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
       app:layout_constraintTop_toBottomOf="@id/nome_do_novo_treino"/>
@@ -47,8 +58,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:drawablePadding="8dp"
-        android:gravity="center"
-        android:hint="DATA DO TREINO"
+        android:hint="Data do treino"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

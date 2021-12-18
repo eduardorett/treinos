@@ -6,16 +6,30 @@
     android:layout_height="match_parent"
     tools:context=".views.DetalhesTreinoActivity">
 
+    <ImageView
+        android:id="@+id/image_logo"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/ic_baseline_directions_bike_24"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/view_detalhes_do_treino"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="DETALHES DO TREINO"
-        android:textSize="50dp"
+        android:textSize="30dp"
         android:gravity="center"
-        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/teal_200"
+        android:textColor="@color/design_default_color_error"
+        app:layout_constraintTop_toBottomOf="@id/image_logo"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"/>
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_exercicios"
@@ -23,27 +37,17 @@
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/view_detalhes_do_treino"
         />
     <Button
         android:id="@+id/go_to_exercise_form"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="exercicios form"
+        android:text="Tela de casdastro de exercicio"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/recycler_exercicios"/>
 
 
-
-    <Button
-        android:id="@+id/button_save_treino"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="salvar treino"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

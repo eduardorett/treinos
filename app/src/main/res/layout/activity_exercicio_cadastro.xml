@@ -6,36 +6,71 @@
     android:layout_height="match_parent"
     tools:context=".views.CadastroExercicioActivity">
 
+
+    <ImageView
+        android:id="@+id/image_logo"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/ic_baseline_directions_bike_24"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
-        android:id="@+id/view_detalhes_do_treino"
+        android:id="@+id/text_detalhes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="DETALHES DO EXERCICIO"
-        android:textSize="50dp"
         android:gravity="center"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"/>
+        android:textSize="35dp"
+        android:background="@color/teal_200"
+        android:textColor="@color/design_default_color_error"
+        app:layout_constraintTop_toBottomOf="@id/image_logo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
 
 
     <EditText
-        android:id="@+id/edit_exercicio"
+        android:id="@+id/edit_nome_do_exercicio"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
-        android:layout_marginBottom="8dp"
+      android:layout_marginTop="30dp"
         android:drawablePadding="8dp"
-        android:hint="xxxxxxx"
+        android:hint="Nome"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/view_detalhes_do_treino" />
+       app:layout_constraintTop_toBottomOf="@+id/text_detalhes" />
+
+    <EditText
+        android:id="@+id/edit_observacoes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawablePadding="8dp"
+        android:hint="Observações"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_nome_do_exercicio" />
+
+    <EditText
+        android:id="@+id/image_url"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawablePadding="8dp"
+        android:hint="Imagem"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_observacoes" />
 
 
     <Button
         android:id="@+id/button_save_exercicio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="salvar exercicio"
+        android:text="salvar exercicio no treino"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />

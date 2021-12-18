@@ -27,9 +27,7 @@ class DetalhesTreinoActivity : AppCompatActivity() {
         }
 
 
-        button_save_treino.setOnClickListener {
-            Toast.makeText(this, "treino salvos", Toast.LENGTH_SHORT).show()
-        }
+
 
     }
 

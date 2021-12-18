@@ -50,10 +50,10 @@
 
     <Button
         android:id="@+id/button_novo_treino"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
         android:text="NOVO TREINO"
-        android:textSize="50dp"
+        android:textSize="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

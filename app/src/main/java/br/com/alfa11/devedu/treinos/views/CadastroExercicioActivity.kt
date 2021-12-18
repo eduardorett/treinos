@@ -1,6 +1,7 @@
 package br.com.alfa11.devedu.treinos.views
 
 import android.content.ContentValues
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -16,25 +17,11 @@ class CadastroExercicioActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_exercicio_cadastro)
 
-        val db = Firebase.firestore
-
-        val exercicio = hashMapOf(
-            "imagem" to "",
-            "nome" to "",
-            "observacoes" to ""
-        )
-
-
-
-        db.collection("Exercicio").document("01JokprDtQigoozjS436")
-            .set(exercicio)
-            .addOnSuccessListener { Log.d(ContentValues.TAG, "DocumentSnapshot successfully written!") }
-            .addOnFailureListener { e -> Log.w(ContentValues.TAG, "Error writing document", e) }
-
 
 
         button_save_exercicio.setOnClickListener {
             Toast.makeText(this, "exercicios salvos", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this,DetalhesTreinoActivity::class.java))
       }
     }
 

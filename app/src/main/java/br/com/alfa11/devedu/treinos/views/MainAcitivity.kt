@@ -45,7 +45,7 @@ class MainAcitivity : AppCompatActivity() {
     private fun EventChangeListener(){
 
         db = FirebaseFirestore.getInstance()
-        db.collection("Treino").
+        db.collection("Treino").orderBy("nome",Query.Direction.ASCENDING).
         addSnapshotListener(object : EventListener<QuerySnapshot> {
             override fun onEvent(
                 value: QuerySnapshot?,

@@ -20,7 +20,7 @@ class TreinosAdapter(private val treinosList: ArrayList<TreinoModel>):RecyclerVi
     override fun onBindViewHolder(holder: TreinosAdapter.MyViewHolder, position: Int) {
 
         val treinoModel:TreinoModel = treinosList[position]
-        holder.detalhes.text = treinoModel.detalhes
+        holder.descricao.text = treinoModel.descricao
         holder.data.text = treinoModel.data // MUDAR O TIPO DEPOIS
         holder.nome.text = treinoModel.nome.toString()
 
@@ -33,7 +33,7 @@ class TreinosAdapter(private val treinosList: ArrayList<TreinoModel>):RecyclerVi
     }
 
     public class MyViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
-        val detalhes: TextView =itemView.findViewById(R.id.detalhes_do_treino_recycler)
+        val descricao: TextView =itemView.findViewById(R.id.detalhes_do_treino_recycler)
         val nome : TextView =itemView.findViewById(R.id.nome_do_treino_recycler)
         val data : TextView =itemView.findViewById(R.id.data_do_treino_recycler)
     }
