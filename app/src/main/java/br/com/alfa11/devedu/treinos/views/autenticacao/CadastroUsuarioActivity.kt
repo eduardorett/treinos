@@ -1,4 +1,4 @@
-package br.com.alfa11.devedu.treinos.views
+package br.com.alfa11.devedu.treinos.views.autenticacao
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,7 +7,6 @@ import android.widget.Toast
 import br.com.alfa11.devedu.treinos.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_usuario_cadastro.*
 import kotlinx.android.synthetic.main.activity_usuario_cadastro.edit_email
 import kotlinx.android.synthetic.main.activity_usuario_cadastro.edit_password
@@ -33,11 +32,11 @@ class CadastroUsuarioActivity : AppCompatActivity() {
 
             if (email == "" && senha == ""){
                 Toast.makeText(baseContext, "Preencha os campos", Toast.LENGTH_SHORT).show()
-            } /*else if (email =="" && senha != ""){
+            } else if (email =="" && senha != ""){
                 Toast.makeText(baseContext, "Preencha o email", Toast.LENGTH_SHORT).show()
             }else if(senha =="" && email != ""){
                 Toast.makeText(baseContext, "Preencha a senha", Toast.LENGTH_SHORT).show()
-            }*/
+            }
             if(senha != "" && senhaConfirmar != ""){
             if (senha == senhaConfirmar ) {
                 counterDaSenha = 1

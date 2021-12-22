@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "130313268072",
-    "project_id": "treinos-81d00",
-    "storage_bucket": "treinos-81d00.appspot.com"
+    "project_number": "188998413513",
+    "project_id": "treinos-f0e11",
+    "storage_bucket": "treinos-f0e11.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:130313268072:android:fac6fd08b4d248714844dd",
+        "mobilesdk_app_id": "1:188998413513:android:b2fe5e30cb883ce2497118",
         "android_client_info": {
           "package_name": "br.com.alfa11.devedu.treinos"
         }
       },
       "oauth_client": [
         {
-          "client_id": "130313268072-efdoscs74fd5hfun7la8ukpdd0v4lmud.apps.googleusercontent.com",
+          "client_id": "188998413513-p5fuml692hueml3s9pkecnhgo2v461ch.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBzaK1Gn2RclzaS0YAmMd02T2GMJ9KbNAM"
+          "current_key": "AIzaSyC0mwnm3ti6R5wQvonEOg0JvC2ScyLhFX8"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "130313268072-efdoscs74fd5hfun7la8ukpdd0v4lmud.apps.googleusercontent.com",
+              "client_id": "188998413513-p5fuml692hueml3s9pkecnhgo2v461ch.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

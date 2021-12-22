@@ -1,4 +1,4 @@
-package br.com.alfa11.devedu.treinos.views
+package br.com.alfa11.devedu.treinos.views.autenticacao
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,7 @@ import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import br.com.alfa11.devedu.treinos.R
+import br.com.alfa11.devedu.treinos.views.MainAcitivity
 import kotlinx.android.synthetic.main.activity_login.*
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser

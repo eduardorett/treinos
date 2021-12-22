@@ -13,19 +13,19 @@
             android:name=".views.CadastroTreinoActivity"
             android:exported="true" />
         <activity
-            android:name=".views.CadastroUsuarioActivity"
+            android:name=".views.autenticacao.CadastroUsuarioActivity"
             android:exported="true" />
         <activity
             android:name=".views.CadastroExercicioActivity"
             android:exported="true" />
         <activity
-            android:name=".views.DetalhesTreinoActivity"
+            android:name=".views.ExerciciosActivity"
             android:exported="true" />
         <activity
             android:name=".views.MainAcitivity"
             android:exported="true" />
         <activity
-            android:name=".views.LoginActivity"
+            android:name=".views.autenticacao.LoginActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Treinos.NoActionBar">

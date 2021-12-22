@@ -1,40 +1,38 @@
 package br.com.alfa11.devedu.treinos.views.adapters
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import br.com.alfa11.devedu.treinos.R
-import br.com.alfa11.devedu.treinos.service.TreinoModel
+import br.com.alfa11.devedu.treinos.treinos.TreinoModel
+import br.com.alfa11.devedu.treinos.treinos.TreinosListener
+import br.com.alfa11.devedu.treinos.views.holders.TreinosViewHolder
 
-class TreinosAdapter(private val treinosList: ArrayList<TreinoModel>):RecyclerView.Adapter<TreinosAdapter.MyViewHolder>(){
+class TreinosAdapter:RecyclerView.Adapter<TreinosViewHolder>(){
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TreinosAdapter.MyViewHolder {
+    private var mTreinosList: List<TreinoModel> = arrayListOf()
+    private lateinit var mListener: TreinosListener
 
-      val itemView = LayoutInflater.from(parent.context).inflate(R.layout.row_treinos_list,parent,false)
-
-        return MyViewHolder(itemView)
-    }
-
-    override fun onBindViewHolder(holder: TreinosAdapter.MyViewHolder, position: Int) {
-
-        val treinoModel:TreinoModel = treinosList[position]
-        holder.descricao.text = treinoModel.descricao
-        holder.data.text = treinoModel.data // MUDAR O TIPO DEPOIS
-        holder.nome.text = treinoModel.nome.toString()
-
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TreinosViewHolder {
+        val item = LayoutInflater.from(parent.context).inflate(R.layout.row_treinos_list, parent, false)
+        return TreinosViewHolder(item, mListener)
     }
 
     override fun getItemCount(): Int {
-
-        return treinosList.size
-
+        return mTreinosList.count()
     }
 
-    public class MyViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
-        val descricao: TextView =itemView.findViewById(R.id.detalhes_do_treino_recycler)
-        val nome : TextView =itemView.findViewById(R.id.nome_do_treino_recycler)
-        val data : TextView =itemView.findViewById(R.id.data_do_treino_recycler)
+    override fun onBindViewHolder(holder: TreinosViewHolder, position: Int) {
+        holder.bind(mTreinosList[position])
     }
+
+    fun updateTreinos(list: List<TreinoModel>) {
+        mTreinosList = list
+        notifyDataSetChanged()
+    }
+
+    fun attachListener(listener: TreinosListener) {
+        mListener = listener
+    }
+
 }
